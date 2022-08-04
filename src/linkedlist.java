@@ -1,4 +1,8 @@
+
+//Basic Linked List
 class linkedlist{
+
+    //Creating Node
     Node head;
     static class Node{
         int value;
@@ -6,36 +10,33 @@ class linkedlist{
         Node(int d){
             value=d;
             next=null;
+
         }
     }
 
     public static void main(String[] args) {
         linkedlist l=new linkedlist();
 
-        //assigning value
-        l.head=new Node(1);
-        Node second=new Node(2);
-        Node third=new Node(3);
+        //assigning values
+        l.head=new Node(10);
+        Node second=new Node(20);
+        Node three =new Node(30);
+        Node four=new Node(40);
 
-        //joining list
+        //joining nodes
         l.head.next=second;
-        second.next=third;
+        second.next=three;
+        three.next=four;
+        four.next=null;
 
-        //printing value
+        //printing Linked List
         while(l.head!=null){
-            System.out.println(l.head.value+" ");
+            System.out.print(l.head.value+" ");
             l.head=l.head.next;
         }
+
     }
 }
 
 
-
-
-
-
-
-
-
-
-
+//Operations on Linked List
