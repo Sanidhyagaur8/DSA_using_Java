@@ -1,5 +1,5 @@
 public class array {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         int[] array;
         array = new int[8];
         System.out.println("Array before data: ");
@@ -44,5 +44,37 @@ public class array {
             System.out.println();
             System.out.println();
         }
+    */
+
+    public static void main(String[] args) {
+        int[] a = new int[5];
+        int count = 1;
+        for (int i = 0; i < a.length; i++) {
+            a[i]=count;
+            System.out.print("Index: "+i+" Element: "+a[i]+"  \n");
+            count++;
+        }
+        System.out.println(" ");
+
+        //2D array
+        int[][] a1=new int[3][3];
+        count=1;
+        for(int i=0;i<a1.length;i++){
+            for(int j=0;j<a1[i].length;j++){
+                a1[i][j]=count;
+                System.out.print(a1[i][j]+" ");
+                count++;
+            }
+            System.out.println(" ");
+        }
+
     }
+}
+
+
+
+
+
+
+
 

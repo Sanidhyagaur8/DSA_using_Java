@@ -40,3 +40,50 @@ class linkedlist{
 
 
 //Operations on Linked List
+class linkedlist1{
+    node head;
+    static class node{
+        int value;
+        node next;
+        node(int d){
+            value=d;
+            next=null;
+        }
+    }
+
+    //insert new node at beginning
+    public void insertatbeginning(int data){
+        node n= new node(data);
+        n.next=head;
+        head=n;
+    }
+
+    //insert new node in middle
+    public void insertatmiddle(node prev_node, int data){
+        if(prev_node==null){
+            System.out.println("No previous node ");
+            return;
+        }
+        node new_node= new node(data);
+        new_node.next=prev_node;
+        prev_node.next=new_node;
+    }
+
+    //print
+   public void display(){
+       node tnode=head;
+        while(tnode != null){
+           System.out.print(tnode.value+" ");
+           tnode=tnode.next;
+       }
+   }
+
+    public static void main(String[] args) {
+       linkedlist1 l=new linkedlist1();
+       l.insertatbeginning(10);
+       l.insertatbeginning(22);
+       l.insertatmiddle(l.head.next,20);
+       l.display();
+
+    }
+}
